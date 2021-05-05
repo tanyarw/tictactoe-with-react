@@ -38,8 +38,7 @@ const Game = () => {
     });
 
   return (
-    <>
-      <h1>Tic Tac Toe</h1>
+    <div>
       <Board squares={history[stepNumber]} onClick={handleClick} />
       <div className="info-wrapper">
         <div>
@@ -48,7 +47,7 @@ const Game = () => {
         </div>
         <h3>{winner ? "Winner: " + winner : "Next Player: " + xO}</h3>
       </div>
-    </>
+    </div>
   );
 };
 
