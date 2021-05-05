@@ -19,7 +19,7 @@ const Game = () => {
     squares[i] = xO;
     setHistory([...historyPoint, squares]);
     setStepNumber(historyPoint.length);
-    setXisNext(!xIsNext);
+    setXisNext(!xIsNext); //opposite
   };
 
   const jumpTo = (step) => {
@@ -39,7 +39,7 @@ const Game = () => {
 
   return (
     <>
-      <h1>React Tic Tac Toe - With Hooks</h1>
+      <h1>Tic Tac Toe</h1>
       <Board squares={history[stepNumber]} onClick={handleClick} />
       <div className="info-wrapper">
         <div>
