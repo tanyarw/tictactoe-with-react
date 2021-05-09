@@ -1,6 +1,8 @@
 # Tic Tac Toe with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live demo
+Check it out [here](https://tanyarw.github.io/tictactoe-with-react/)
+
 
 ## Available Scripts
 
