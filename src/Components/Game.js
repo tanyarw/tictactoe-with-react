@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { calculateWinner } from "../Helpers/Helpers";
 import Board from "./Board";
+import Strikethrough from "./Strikethrough";
 
 const Game = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -37,15 +38,24 @@ const Game = () => {
       );
     });
 
+    const resetGame = () => {
+      //Reset arrays
+      setHistory([Array(9).fill(null)]);
+      setStepNumber(0);
+      setXisNext(true);
+    }  
+
   return (
-    <div>
-      <Board squares={history[stepNumber]} onClick={handleClick} />
+    <div>      
+      <Board squares={history[stepNumber]} onClick={handleClick} />   
+      <button className="reset-button" onClick={resetGame}>RESET</button>         
+      <Strikethrough winner={winner} squares={history[stepNumber]}/>        
       <div className="info-wrapper">
         <div>
-          <h3>History</h3>
+          <h3>The Game's History</h3>
           {renderMoves()}
         </div>
-        <h3>{winner ? "Winner: " + winner : "Next Player: " + xO}</h3>
+        <h3>{winner ? "Winner: " + winner : "Next Player: " + xO}</h3>        
       </div>
     </div>
   );
