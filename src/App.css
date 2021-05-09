@@ -21,8 +21,8 @@ h3 {
 .board {
   border: 0.25rem solid #fff;
   background: #fff;
-  width: 300px;
-  height: 300px;
+  width: 18.75em;
+  height: 18.75em;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 0.25rem;
@@ -44,8 +44,16 @@ h3 {
 .X {
   color: red;
 }
+
 .O {
   color: green;
+}
+
+.win {
+  background: grey;
+  font-size: 2rem;
+  outline: none;
+  border: none;
 }
 
 .info-wrapper {
