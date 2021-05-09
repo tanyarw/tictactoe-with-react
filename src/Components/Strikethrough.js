@@ -28,7 +28,7 @@ const Strikethrough = ({winner,squares}) => {
     }  
 
     const defaultWidth = "280px";
-    const diagonalWidth = "400px";
+    const diagonalWidth = "390px";
 
     switch (winningIndex) {
         case 0:
@@ -61,41 +61,47 @@ const Strikethrough = ({winner,squares}) => {
         case 3:
         style = 
             {
+                height: "5px",
                 transform: "rotate(90deg)",
-                top: "145px",
-                left: "-86px",
+                top: "279px",
+                left: "375px",
                 width: defaultWidth }
         break;
         case 4:
         style = 
             {
+                height: "5px",
                 transform: "rotate(90deg)",
-                top: "145px",
-                left: "15px",
+                top: "279px",
+                left: "474px",
                 width: defaultWidth }
         break;
         case 5:
         style = 
             {
+                height: "5px",
                 transform: "rotate(90deg)",
-                top: "145px",
-                left: "15px",
+                top: "279px",
+                left: "572px",
                 width: defaultWidth }
         break;
         case 6:
         style = 
             {
+                height: "5px",
                 transform: "rotate(45deg)",
-                top: "145px",
-                left: "-44px",
+                top: "278px",
+                left: "419px",
                 width: diagonalWidth }
         break;
         case 7:
         style = 
-            {transform: "rotate(-45deg)",
-            top: "145px",
-            left: "-46px",
-            width: diagonalWidth }
+            {
+                height: "5px",
+                transform: "rotate(-45deg)",
+                top: "278px",
+                left: "419px",
+                width: diagonalWidth }
         break;
         default:
         style = null
